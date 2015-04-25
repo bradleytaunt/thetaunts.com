@@ -1,0 +1,79 @@
+doctype html
+html
+    head
+        title The Wedding of Cassandra St. Louis &amp; Bradley Taunt
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+        link(rel='stylesheet', type='text/css', href='css/global.css')
+        script(src='//use.typekit.net/tqi3qss.js')
+        script.
+            try{Typekit.load();}catch(e){}
+
+    body
+
+        //- Wrapper
+        .wrapper
+
+            //- Header
+            header
+                include ./includes/logo.jade
+                h1 The marriage of
+                    br
+                    | Cassandra St. Louis &amp; Bradley Taunt
+                h2 We're getting married, so come celebrate with us!
+
+            //- Container
+            .container
+
+                .card.full
+                    h3 Wedding Party
+                    h4 Bridesmaids
+                        span Joanna Gladys &nbsp;/&nbsp; Cavell Smith &nbsp;/&nbsp; Jacqui Dilnot
+                    hr
+                    h4 Groomsmen
+                        span Stephen Taunt &nbsp;/&nbsp; Chris Cousins &nbsp;/&nbsp; Luke Bailey
+
+            //- Container
+            .container
+
+                .card
+                    h3 Ceremony
+                    p The wedding ceremony begins at 1 PM at the Loch March Golf &amp; Country Club.
+                    p The event will take place outside, weather permitting.
+                    p
+                        | The address is:
+                        br
+                        | 1755 Old Carp Road, Kanata ON, K2K 1X7
+
+                .card.second
+                    h3 Reception
+                    p The reception will begin at 6 PM inside the Loch March Banquet Hall.
+                    p Dinner will be provided, along with great music, dancing and a cash bar. This is a 19+ event.
+                    p (Each guest will also recieve two drink tickets)
+
+            //- Container
+            .container
+
+                .card.full.rsvp
+                    h3 RSVP
+                    p Please let us know if you're attending by July 1st, 2015. We look forward to seeing you there!
+                    a.button.reverse(href="https://bradtaunt.wufoo.com/forms/rsvp/", target="_blank") RSVP
+
+            //- Container
+            .container
+
+                .card
+                    h3 Accommodations
+                    p If you need to book a hotel for your stay, we have rooms for guests at the Brookstreet Hotel.
+                    a.button(href="") Make reservations
+
+                .card.second
+                    h3 Other
+                    p
+                        | If you have any questions, concerns or just want to chat about anything, feel free to email us:
+                    a.button(href="") Drop us a line
+
+            //- Container
+            .container
+
+                .footer
+                    p Made with love by Bradley Taunt

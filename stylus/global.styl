@@ -1,0 +1,164 @@
+// Import variables
+@import '_variables'
+
+// Body / General Styles
+*
+    box-sizing border-box
+    -moz-box-sizing border-box
+    -webkit-box-sizing border-box
+html
+    height 100%
+    margin 0
+
+body
+    background cWhite
+    color cBlack
+    font-family "skolar", "Georgia", serif
+    font-size 100%
+    font-weight 400 // Regular
+    height 100%
+    margin 0
+
+// Headings
+h1,h2,h3,h4,h5,h6,a,a:active
+    color cBlack
+    font-family "adelle-sans", "Helvetica", sans-serif
+    font-size 32px
+    font-weight 300 // Light
+    margin 0
+
+// Paragraphs, spans, etc.
+p
+    font-size 18px
+    line-height 30px
+    margin 10px 0 0
+
+a,a:visited
+    display inline-block
+    text-decoration none
+
+// Buttons
+a.button
+    background transparent
+    border 2px solid cBlack
+    color cBlack
+    font-size 13px
+    font-weight 600
+    letter-spacing 4px
+    margin 40px 0 0
+    padding 10px 60px
+    text-transform uppercase
+    transition .2s
+
+    &:hover
+        background cAccent
+        color cWhite
+        border-color cAccent
+
+    &.reverse
+        background cBlack
+        color cWhite
+
+        &:hover
+            background cAccent
+
+// Wrapper
+.wrapper
+    background cWhite
+    display block
+    margin 2% auto
+    max-width: 1200px
+    width 96%
+
+// Header
+header
+    padding 0px 40px 120px
+    text-align center
+
+    svg
+        fill cAccent
+        margin 0
+        width 120px
+
+    h1
+        color cGrayDark
+        font-family "skolar", "Georgia", serif
+        font-size 14px
+        letter-spacing 6px
+        line-height 25px
+        margin -20px 0 20px 0
+        text-transform uppercase
+
+    h2
+        font-size 86px
+        font-weight 400 // Regular
+        letter-spacing 2px
+
+// Container
+.container
+    display flex
+    flex-direction row
+    width 100%
+
+// Card
+.card
+    border 2px solid cBlack
+    flex-grow 1
+    margin-bottom -1px
+    padding 80px 100px
+    text-align center
+    width 50%
+
+    &.second
+        margin-left -1px
+
+    &.full
+        width 100%
+
+    &.rsvp
+        border 20px solid cBlack
+
+    hr
+        background cBlack
+        border 0
+        height 2px
+        margin-bottom 40px
+
+    h3
+        color cBlack
+        font-size 16px
+        letter-spacing 4px
+        margin-bottom 40px
+        text-transform uppercase
+
+    h4
+        color cBlack
+        font-family "freight-sans-pro", "Georgia", serif
+        font-size 14px
+        margin-bottom 40px
+        text-transform uppercase
+
+        &:last-of-type
+            margin-bottom 0
+
+        span
+            display: block
+            font-size: 16px
+            letter-spacing 1px
+            margin-top 15px
+            text-transform none
+            word-spacing 1px
+
+.footer
+    flex-grow 1
+    padding 20px 20px 0
+
+    p
+        font-family "adelle-sans", "Helvetica", sans-serif
+        font-size 12px
+        letter-spacing 3px
+        text-align center
+        text-transform uppercase
+
+// MOBILE
+// @media(max-width:800px)

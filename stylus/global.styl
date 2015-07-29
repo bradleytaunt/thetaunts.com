@@ -6,6 +6,44 @@
     box-sizing border-box
     -moz-box-sizing border-box
     -webkit-box-sizing border-box
+
+// Import fonts
+
+// Fira Sans
+@font-face {
+    font-family: 'fira_sans';
+    src: url('/fonts/firasans-light-webfont.eot');
+    src: url('/fonts/firasans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/firasans-light-webfont.woff2') format('woff2'),
+         url('/fonts/firasans-light-webfont.woff') format('woff'),
+         url('/fonts/firasans-light-webfont.ttf') format('truetype'),
+         url('/fonts/firasans-light-webfont.svg#fira_sanslight') format('svg');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'fira_sans';
+    src: url('/fonts/firasans-medium-webfont.eot');
+    src: url('/fonts/firasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/firasans-medium-webfont.woff2') format('woff2'),
+         url('/fonts/firasans-medium-webfont.woff') format('woff'),
+         url('/fonts/firasans-medium-webfont.ttf') format('truetype'),
+         url('/fonts/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
+    font-weight: bold;
+}
+
+// Neuton
+@font-face {
+    font-family: 'neuton';
+    src: url('/fonts/neuton-extralight-webfont.eot');
+    src: url('/fonts/neuton-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/neuton-extralight-webfont.woff2') format('woff2'),
+         url('/fonts/neuton-extralight-webfont.woff') format('woff'),
+         url('/fonts/neuton-extralight-webfont.ttf') format('truetype'),
+         url('/fonts/neuton-extralight-webfont.svg#neutonextralight') format('svg');
+    font-weight: normal;
+}
+
 html
     height 100%
     margin 0
@@ -13,7 +51,7 @@ html
 body
     background cWhite
     color cBlack
-    font-family "skolar", "Georgia", serif
+    font-family "neuton", "Georgia", serif
     font-size 100%
     font-weight 400 // Regular
     height 100%
@@ -22,7 +60,7 @@ body
 // Headings
 h1,h2,h3,h4,h5,h6,a,a:active
     color cBlack
-    font-family "adelle-sans", "Helvetica", sans-serif
+    font-family "fira_sans", "Helvetica", sans-serif
     font-size 32px
     font-weight 300 // Light
     margin 0
@@ -82,7 +120,7 @@ header
 
     h1
         color cGrayDark
-        font-family "skolar", "Georgia", serif
+        font-family "neuton", "Georgia", serif
         font-size 14px
         letter-spacing 6px
         line-height 25px
@@ -104,19 +142,27 @@ header
 .card
     border 2px solid cBlack
     flex-grow 1
-    margin-bottom -1px
+    margin-bottom -2px
     padding 80px 100px
     text-align center
     width 50%
 
     &.second
-        margin-left -1px
+        margin-left -2px
 
     &.full
         width 100%
 
     &.rsvp
         border 20px solid cBlack
+        transition: all .3s ease
+
+        &:hover
+            border-color: cAccent
+
+            .button
+                background-color: cAccent
+                border-color: cAccent
 
     hr
         background cBlack
@@ -133,8 +179,9 @@ header
 
     h4
         color cBlack
-        font-family "freight-sans-pro", "Georgia", serif
+        font-family "neuton", "Georgia", serif
         font-size 14px
+        letter-spacing: 3px
         margin-bottom 40px
         text-transform uppercase
 
@@ -151,21 +198,23 @@ header
 
 .footer
     flex-grow 1
-    padding 20px 20px 0
+    padding 20px 20px
 
     p
-        font-family "adelle-sans", "Helvetica", sans-serif
+        font-family "fira_sans", "Helvetica", sans-serif
         font-size 12px
         letter-spacing 3px
         text-align center
         text-transform uppercase
 
-// MOBILE
-@media(max-width:800px)
+// TABLET
+@media(max-width:980px)
     header
         h2
             font-size 36px
 
+// MOBILE
+@media(max-width:800px)
     // Container
     .container
         display block
@@ -173,6 +222,7 @@ header
     // Card
     .card
         display block
+        margin-bottom 2%
         padding 80px 40px
         width 100%
 

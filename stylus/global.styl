@@ -8,41 +8,7 @@
     -webkit-box-sizing border-box
 
 // Import fonts
-
-// Fira Sans
-@font-face {
-    font-family: 'fira_sans';
-    src: url('/fonts/firasans-light-webfont.eot');
-    src: url('/fonts/firasans-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/firasans-light-webfont.woff2') format('woff2'),
-         url('/fonts/firasans-light-webfont.woff') format('woff'),
-         url('/fonts/firasans-light-webfont.ttf') format('truetype'),
-         url('/fonts/firasans-light-webfont.svg#fira_sanslight') format('svg');
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'fira_sans';
-    src: url('/fonts/firasans-medium-webfont.eot');
-    src: url('/fonts/firasans-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/firasans-medium-webfont.woff2') format('woff2'),
-         url('/fonts/firasans-medium-webfont.woff') format('woff'),
-         url('/fonts/firasans-medium-webfont.ttf') format('truetype'),
-         url('/fonts/firasans-medium-webfont.svg#fira_sansmedium') format('svg');
-    font-weight: bold;
-}
-
-// Neuton
-@font-face {
-    font-family: 'neuton';
-    src: url('/fonts/neuton-extralight-webfont.eot');
-    src: url('/fonts/neuton-extralight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/neuton-extralight-webfont.woff2') format('woff2'),
-         url('/fonts/neuton-extralight-webfont.woff') format('woff'),
-         url('/fonts/neuton-extralight-webfont.ttf') format('truetype'),
-         url('/fonts/neuton-extralight-webfont.svg#neutonextralight') format('svg');
-    font-weight: normal;
-}
+// Put Gibson font here
 
 html
     height 100%
@@ -51,18 +17,17 @@ html
 body
     background cWhite
     color cBlack
-    font-family "neuton", "Georgia", serif
+    font-family "Gibson", "Helvetica", sans-serif
     font-size 100%
-    font-weight 400 // Regular
+    font-weight 300 // Light
     height 100%
     margin 0
 
 // Headings
 h1,h2,h3,h4,h5,h6,a,a:active
     color cBlack
-    font-family "fira_sans", "Helvetica", sans-serif
     font-size 32px
-    font-weight 300 // Light
+    font-weight 600 // Bold
     margin 0
 
 // Paragraphs, spans, etc.
@@ -75,8 +40,18 @@ a,a:visited
     display inline-block
     text-decoration none
 
+    &.rsvp
+        cursor: pointer
+
+        p
+            font-weight: 300 // Light
+
+        .button
+            display: inline-block
+
 // Buttons
 a.button
+.button
     background transparent
     border 2px solid cBlack
     color cBlack
@@ -84,7 +59,7 @@ a.button
     font-weight 600
     letter-spacing 4px
     margin 40px 0 0
-    padding 10px 60px
+    padding 13px 60px 10px
     text-transform uppercase
     transition .2s
 
@@ -104,14 +79,50 @@ a.button
 .wrapper
     background cWhite
     display block
-    margin 2% auto
+    left: 0
+    margin 0 auto 2%
     max-width: 1200px
+    position: fixed
+    right: 0
     width 96%
+    z-index: 1
+
+// Fade
+.fade
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)
+    bottom: 0
+    content:''
+    height: 200px
+    position: absolute
+    width: 100%
+    z-index: 2
+
+// Content Wrapper
+.content-wrapper
+    background: cWhite
+    display: block
+    left: 0
+    margin: 100vh auto 0
+    max-width: 1200px
+    position: absolute
+    right: 0
+    width 96%
+    z-index: 3
 
 // Header
 header
-    padding 0px 40px 120px
+    padding 0px 40px 20px
     text-align center
+    height: 100vh
+
+    img
+        display: block
+        margin: 0 auto
+        max-width: 857px
+        width: 100%
+
+        &.mobile
+            display: none
 
     svg
         fill cAccent
@@ -120,7 +131,6 @@ header
 
     h1
         color cGrayDark
-        font-family "neuton", "Georgia", serif
         font-size 14px
         letter-spacing 6px
         line-height 25px
@@ -179,8 +189,8 @@ header
 
     h4
         color cBlack
-        font-family "neuton", "Georgia", serif
         font-size 14px
+        font-weight: 300 // Light
         letter-spacing: 3px
         margin-bottom 40px
         text-transform uppercase
@@ -201,7 +211,6 @@ header
     padding 20px 20px
 
     p
-        font-family "fira_sans", "Helvetica", sans-serif
         font-size 12px
         letter-spacing 3px
         text-align center
@@ -215,6 +224,25 @@ header
 
 // MOBILE
 @media(max-width:800px)
+    .wrapper
+        position: relative
+
+    .fade
+        display: none
+
+    header
+        height: auto
+
+        img.desktop
+            display: none
+
+        img.mobile
+            display: block
+            max-width: 300px
+
+    .content-wrapper
+        margin-top: 0
+
     // Container
     .container
         display block

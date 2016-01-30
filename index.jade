@@ -16,7 +16,12 @@ html
                 h1 Cassandra &amp; Bradley
                     br
                     | September 4th, 2016
-                h2 We're getting married, so come celebrate with us!
+                img.desktop(src="includes/tying-the-knot.svg")
+                img.mobile(src="includes/tying-the-knot-mobile.svg")
+
+        .fade
+
+        .content-wrapper
 
             //- Container
             .container
@@ -51,10 +56,11 @@ html
             //- Container
             .container
 
-                .card.full.rsvp
+                a.card.full.rsvp(href="https://bradtaunt.wufoo.com/forms/rsvp/", target="_blank")
                     h3 RSVP
                     p Please let us know if you're attending by July 1st, 2016. We look forward to seeing you there!
-                    a.button.reverse(href="https://bradtaunt.wufoo.com/forms/rsvp/", target="_blank") RSVP
+                    .button.reverse
+                        | RSVP
 
             //- Container
             .container
